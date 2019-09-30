@@ -5,7 +5,6 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface ApiInterface {
-    //?tags=story&page=1
-    @GET(Constants.SEARCH)
+    @GET(Constants.GET_POSTS)
     suspend fun getPosts(@Query(value = "tags") tags: String, @Query("page") page: Int): Response<Search>
 }
